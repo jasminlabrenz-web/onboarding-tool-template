@@ -25,7 +25,9 @@ Klick den **„Deploy with Vercel"**-Button oben oder gehe auf [vercel.com/new](
 
 ### 3. Vercel KV anschließen
 
-Im Vercel-Projekt: **Storage → Create Database → KV** wählen, mit dem Projekt verbinden. Die ENV-Variablen `KV_REST_API_URL` und `KV_REST_API_TOKEN` werden automatisch gesetzt.
+Im Vercel-Projekt: **Storage → Create Database → Marketplace → Upstash → Redis** wählen. Region **Frankfurt (eu-west-1)** wählen, dann **Create**. Anschließend **Connect to Project** → dein Projekt wählen.
+
+**⚠️ Wichtig:** Im Dialog **„Connect Project"** beim Feld **„Custom Environment Variable Prefix"** den Default `STORAGE` durch **`KV`** ersetzen — sonst findet das Tool die Datenbank nicht und die Admin-Seite zeigt einen 500-Fehler.
 
 ### 4. ENV-Variablen setzen
 
